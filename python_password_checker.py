@@ -2,7 +2,7 @@ from telegram import Update
 from telegram.ext import Updater, CallbackContext, MessageHandler, Filters
 import requests
 import hashlib
-import os
+
 def request_api_data(query_char):
     url = 'https://api.pwnedpasswords.com/range/' + query_char
     response = requests.get(url)
@@ -39,7 +39,7 @@ def print_chat(update:Update,context:CallbackContext):
 
 
 def main():
-    updater = Updater(token=TOKEN,use_context=True)
+    updater = Updater(token='1438893616:AAEUrzCQs1UmET8H_Ls4cArC_IvWZtnFTUA',use_context=True)
     dp = updater.dispatcher
     dp.add_handler(MessageHandler(Filters.command,print_chat))
     updater.start_polling()
