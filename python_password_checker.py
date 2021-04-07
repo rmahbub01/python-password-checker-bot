@@ -39,7 +39,7 @@ def print_chat(update:Update,context:CallbackContext):
 
 
 def main():
-    updater = Updater(token='1438893616:AAFGqlJ7gA3ynbo0qYo2CVkDVUQ8_THp0g0',use_context=True)
+    updater = Updater(token='token',use_context=True)
     dp = updater.dispatcher
     dp.add_handler(MessageHandler(Filters.command,print_chat))
     updater.start_polling()
